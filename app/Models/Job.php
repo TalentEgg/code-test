@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Faker\Provider\Uuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Faker\Factory as Faker;
 
 /**
  * Class Job
@@ -36,8 +36,10 @@ class Job extends Model
     public static function boot()
     {
         parent::boot();
+
         self::creating(function ($model) {
-            $model->public_id = (string) Uuid::generate(4);
+            $faker = Faker::create();
+            $model->public_id = $faker->uuid;
         });
     }
 }

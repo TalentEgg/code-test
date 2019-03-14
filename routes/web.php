@@ -15,19 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::group(['prefix' => 'jobs'], function () {
-//    // Jobs index
-//    // NOTE: You can replace this with resources controller
-//    // NOTE: Feel free to add more routes as needed
-//    Route::get('/', [
-//        'as' => 'jobs.index',
-//        'uses' => 'JobsController@index'
-//    ]);
-//});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/job', 'JobsController');
+Route::resource('/jobs', 'JobsController');
 Route::get('/job/{job}/edit', 'JobsController@edit')->name('job.edit');
