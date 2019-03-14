@@ -16,12 +16,26 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'jobs'], function () {
-    // Jobs index
-    // NOTE: You can replace this with resources controller
-    // NOTE: Feel free to add more routes as needed
+
     Route::get('/', [
         'as' => 'jobs.index',
         'uses' => 'JobsController@index'
+    ]);
+    Route::get('/add', [
+        'as' => 'job.add',
+        'uses' => 'JobsController@add'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'job.edit',
+        'uses' => 'JobsController@edit'
+    ]);
+    Route::post('/store/{id?}', [
+        'as' => 'job.store',
+        'uses' => 'JobsController@store'
+    ]);
+    Route::get('/delete/{id}', [
+        'as' => 'job.delete',
+        'uses' => 'JobsController@delete'
     ]);
 });
 

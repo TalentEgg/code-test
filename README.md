@@ -1,6 +1,6 @@
-Name: (Your name)
+Name: Dmitry Dolgov
 
-Email: (Your email)
+Email: ddolgoff@gmail.com
 
 
 ---
