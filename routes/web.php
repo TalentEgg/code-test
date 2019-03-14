@@ -20,4 +20,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/jobs', 'JobsController');
-Route::get('/job/{job}/edit', 'JobsController@edit')->name('job.edit');

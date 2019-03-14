@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use Illuminate\Http\Request;
 
 /**
@@ -27,11 +28,22 @@ class JobsController extends Controller
      */
     public function index()
     {
+        $jobs = Job::all();
+
         /*
             TODO:
             - Display all jobs (each job will have a button to edit)
             - Button to add new job
          */
+        return view('jobs.index', compact('jobs'));
+    }
+
+    /**
+     * Navigate to the create view with job information.
+     */
+    public function create()
+    {
+
     }
 
     /**
