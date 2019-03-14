@@ -20,6 +20,15 @@ class Job extends Model
     protected $table = 'jobs';
 
     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'id',
+    ];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -51,5 +60,26 @@ class Job extends Model
     public function getRouteKeyName()
     {
         return 'public_id';
+    }
+
+    /**
+     * Relationship method to retrieve @see User that created this job.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Model function to check job belongs to @see User
+     *
+     * @param $user
+     * @return mixed
+     */
+    public function hasUser($user)
+    {
+        return ($this->user->id == $user->id);
     }
 }

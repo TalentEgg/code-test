@@ -26,11 +26,13 @@ class JobsController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $jobs = Job::all();
+        $user = $request->user();
+        $jobs = $user->jobs;
 
         return view('jobs.index', compact('jobs'));
     }
@@ -50,7 +52,10 @@ class JobsController extends Controller
      */
     public function store(StoreJobRequest $request)
     {
+        $user = $request->user();
+
         $data = $request->all();
+        $data['user_id'] = $user->id;
 
         $job = new Job($data);
         $job->save();
@@ -83,6 +88,11 @@ class JobsController extends Controller
             //TODO: return error;
         }
 
+        $user = $request->user();
+        if (!$job->hasUser($user)) {
+            //TODO: return error
+        }
+
         $data = $request->all();
         $saved = $job->update($data);
 
@@ -102,6 +112,12 @@ class JobsController extends Controller
      */
     public function destroy(Job $job)
     {
+        $user = auth()->user();
+
+        if (!$job->hasUser($user)) {
+            //TODO: return error
+        }
+
         $deleted = $job->delete();
 
         return redirect()->action('JobsController@index', compact($deleted));
