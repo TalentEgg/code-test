@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/**
+ * Class JobsController
+ * @package App\Http\Controllers
+ */
 class JobsController extends Controller
 {
     /**
@@ -30,5 +34,35 @@ class JobsController extends Controller
          */
     }
 
-    // NOTE: Feel free to add more methods as needed
+    /**
+     * Create the job.
+     */
+    public function store()
+    {
+
+    }
+
+    /**
+     * Navigate to the edit view with job information.
+     */
+    public function edit()
+    {
+
+    }
+
+    /**
+     * Update the job with changes.
+     */
+    public function update()
+    {
+
+    }
+
+    /**
+     * Delete the job.
+     */
+    public function delete()
+    {
+
+    }
 }
