@@ -1,4 +1,9 @@
 <ul class="jobs-list">
+
+    <br />
+    <h4> JOBS ( {{ $jobs->count() }} ) </h4>
+    <br />
+
     @foreach($jobs as $job)
         <li>
 
@@ -10,7 +15,7 @@
                 <div>
 
                     <a href="{{ route('jobs.edit', compact('job')) }}">
-                        EDIT
+                        <button>EDIT</button>
                     </a>
 
                     <form
@@ -27,3 +32,5 @@
         </li>
     @endforeach
 </ul>
+
+

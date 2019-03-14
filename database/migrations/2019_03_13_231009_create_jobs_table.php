@@ -18,11 +18,19 @@ class CreateJobsTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('public_id')->unique();
 
-                $table->unsignedInteger('user_id');
+                $table->unsignedBigInteger('user_id');
                 $table->foreign('user_id')
                     ->references('id')
                     ->on('users')
                     ->onDelete('cascade');
+
+                $table->string('company_name', 255)
+                    ->nullable()
+                    ->default(null);
+
+                $table->string('job_title', 255)
+                    ->nullable()
+                    ->default(null);
 
                 $table->text('description')
                     ->nullable()

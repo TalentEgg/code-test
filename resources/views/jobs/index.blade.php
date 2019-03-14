@@ -5,13 +5,9 @@
     <div class="global-width">
 
         <div class="base-sidebar-layout__sidebar">
-            @if($jobs->count() !== 0)
-                <a
-                    href="{{ action('JobsController@create') }}"
-                >
+                <a href="{{ action('JobsController@create') }}" class="btn btn-xs btn-info pull-right">
                     POST a JOB
                 </a>
-            @endif
         </div>
 
         <div class="base-sidebar-layout__content">

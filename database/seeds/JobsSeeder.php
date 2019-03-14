@@ -30,6 +30,8 @@ class JobsSeeder extends \Illuminate\Database\Seeder
 
                 $jobInfo = [
                     'user_id' => $user->id,
+                    'company_name' => $faker->company,
+                    'job_title' => $faker->jobTitle,
                     'description' => $faker->paragraph,
                     'address' => $faker->address,
                 ];

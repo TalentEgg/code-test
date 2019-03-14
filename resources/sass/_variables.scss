@@ -7,14 +7,48 @@ $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+$text: lighten(black,35%);
+
 // Colors
-$blue: #3490dc;
+$blue: #007aff;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66D9b;
-$red: #e3342f;
+$red: #E31415;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$navy: #314159;
+$grey: #666666;
+
+$global-glutter: 20px;
+$grid-col-count: 12;
+
+$breakpoint-x-small: 	480px;
+$breakpoint-smaller: 	640px;
+$breakpoint-small: 		768px;
+$breakpoint-medium: 	992px;
+$breakpoint-large: 		1200px;
+
+$breakpoints: (
+    'x-small': 		(min-width: $breakpoint-x-small),
+    'x-small-max': 	(max-width: $breakpoint-x-small - 1),
+    'smaller': 		(min-width: $breakpoint-smaller),
+    'smaller-max': 	(max-width: $breakpoint-smaller - 1),
+    'small': 		(min-width: $breakpoint-small),
+    'small-max': 	(max-width: $breakpoint-small - 1),
+    'medium': 		(min-width: $breakpoint-medium),
+    'medium-max': 	(max-width: $breakpoint-medium - 1),
+    'large': 		(min-width: $breakpoint-large),
+    'large-max': 	(max-width: $breakpoint-large - 1),
+);
+
+$breakpoints-grid: (
+    'xsm': 	'x-small',
+    'sml': 	'smaller',
+    'sm': 	'small',
+    'md': 	'medium',
+    'lg': 	'large'
+);
