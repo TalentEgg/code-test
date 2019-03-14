@@ -5,7 +5,7 @@
     <div class="global-width">
 
         <div class="base-sidebar-layout__sidebar">
-            @if($jobs->count() === 0)
+            @if($jobs->count() !== 0)
                 <a
                     href="{{ action('JobsController@create') }}"
                 >
@@ -17,7 +17,7 @@
         <div class="base-sidebar-layout__content">
             <div id="active-tab">
                 @if($jobs->count() === 0)
-                    @include('jobs.elements.create-job')
+                    @include('jobs.create')
                 @else
                     @include('jobs.elements.jobs-list', ['jobs' => $jobs])
                 @endif

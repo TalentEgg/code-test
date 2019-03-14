@@ -42,4 +42,14 @@ class Job extends Model
             $model->public_id = $faker->uuid;
         });
     }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'public_id';
+    }
 }
