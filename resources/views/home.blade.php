@@ -1,6 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card mb-5">
+                    <div class="card-header">
+
+                        <div class="row">
+                            <div class="col-md-3"> Jobs</div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                        <jobs-loader-component></jobs-loader-component>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

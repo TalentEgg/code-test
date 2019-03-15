@@ -1,10 +1,34 @@
-Name: (Your name)
+Name: Parth Rai Sharma
 
-Email: (Your email)
+Email: parthrai2@gmail.com
+
+
+I am using Vue.js for front end along with Vue router and some other node/Vue packages.
+
+Jobs table can perform live search, sorting , pagination from the front end.
+
+Application is completely working as a Single-Page-Application which is comminucating with laravel backend.
+
+LIVE DEMO
+
+https://talentegg.parthrai.ca/login
+
+ username - john@talent.com
+
+ pass- testpass
+
+
+
 
 
 ---
 Instructions:
-   - Get this Laravel application set up and running.
-   - Register a user
-   - Further instructions will be in `/home`
+   - Install Composer packages
+    
+     `composer install`
+   - Install node modules
+   
+     `npm install`
+     
+     
+   
