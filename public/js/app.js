@@ -1792,9 +1792,89 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/jobs/AddComponent.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\resources\\js\\components\\jobs\\AddComponent.vue: Unexpected token (90:21)\n\n\u001b[0m \u001b[90m 88 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 | \u001b[39m                    })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 91 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 92 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 93 | \u001b[39m                \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mjobTitle\u001b[33m=\u001b[39m\u001b[32m\"\"\u001b[39m\u001b[0m\n    at Parser.raise (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:3831:17)\n    at Parser.unexpected (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5143:16)\n    at Parser.parseExprAtom (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6283:20)\n    at Parser.parseExprSubscripts (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5862:23)\n    at Parser.parseMaybeUnary (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5842:21)\n    at Parser.parseExprOps (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5729:23)\n    at Parser.parseMaybeConditional (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5702:23)\n    at Parser.parseMaybeAssign (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5647:21)\n    at Parser.parseExpression (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5595:23)\n    at Parser.parseStatementContent (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:7378:23)\n    at Parser.parseStatement (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:7243:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:7810:25)\n    at Parser.parseBlockBody (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:7797:10)\n    at Parser.parseBlock (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:7786:10)\n    at Parser.parseFunctionBody (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6876:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6860:10)\n    at Parser.parseMethod (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6804:10)\n    at Parser.parseObjectMethod (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6713:19)\n    at Parser.parseObjPropValue (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6755:23)\n    at Parser.parseObj (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6670:12)\n    at Parser.parseExprAtom (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6229:21)\n    at Parser.parseExprSubscripts (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5862:23)\n    at Parser.parseMaybeUnary (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5842:21)\n    at Parser.parseExprOps (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5729:23)\n    at Parser.parseMaybeConditional (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5702:23)\n    at Parser.parseMaybeAssign (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5647:21)\n    at Parser.parseObjectProperty (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6730:101)\n    at Parser.parseObjPropValue (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6755:101)\n    at Parser.parseObj (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6670:12)\n    at Parser.parseExprAtom (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:6229:21)\n    at Parser.parseExprSubscripts (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5862:23)\n    at Parser.parseMaybeUnary (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5842:21)\n    at Parser.parseExprOps (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5729:23)\n    at Parser.parseMaybeConditional (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5702:23)\n    at Parser.parseMaybeAssign (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:5647:21)\n    at Parser.parseExportDefaultExpression (C:\\Users\\parths\\Desktop\\OT\\work\\code-test\\node_modules\\@babel\\parser\\lib\\index.js:8405:24)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      jobTitle: '',
+      jobDescription: '',
+      isValidated: true
+    };
+  },
+  methods: {
+    add: function add() {
+      console.log(this.companyName);
+
+      if (this.validate()) {
+        var data = {
+          jobTitle: this.jobTitle,
+          jobDescription: this.jobDescription
+        };
+        var ref = this;
+        axios.post('/jobs/add', data).then(function (response) {
+          console.log(response);
+        });
+        this.jobTitle = "";
+        this.jobDescription = "";
+        this.$dialog.alert('Job Posted!').then(function (dialog) {});
+      }
+    },
+    validate: function validate() {
+      if (this.jobTitle == "" || this.jobDescription == "") {
+        this.isValidated = false;
+        return false;
+      } else return true;
+    }
+  }
+});
 
 /***/ }),
 
