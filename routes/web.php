@@ -23,8 +23,11 @@ Route::group(['prefix' => 'jobs'], function () {
         'as' => 'jobs.index',
         'uses' => 'JobsController@index'
     ]);
+
+    Route::post('/add','JobsController@add');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

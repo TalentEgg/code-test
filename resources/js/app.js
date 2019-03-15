@@ -7,7 +7,27 @@
 
 require('./bootstrap');
 
+
+
 window.Vue = require('vue');
+
+
+import VueRouter from 'vue-router'
+import routes from './routes'
+import VuejsDialog from 'vuejs-dialog'
+import Notifications from 'vue-notification'
+
+
+
+
+Vue.use(VueRouter)
+Vue.use(Notifications)
+Vue.use(VuejsDialog)
+
+const router = new VueRouter({
+    routes
+});
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +41,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('jobs-loader-component', require('./components/jobs/Loader.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,5 +51,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router,
 });
