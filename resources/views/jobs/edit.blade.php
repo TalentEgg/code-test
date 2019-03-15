@@ -4,6 +4,9 @@
 
     <section class="container">
 
+        <h2>EDIT JOB</h2>
+        <br />
+
         <form class="form"
               method="POST"
               action="{{ route('jobs.update', ['job' => $job->public_id]) }}"
@@ -84,7 +87,7 @@
 
             <div>
                 <input type="submit" value="Save" />
-                <input type="button" value="Cancel" />
+                <a href="{{ URL::previous() }}" class="btn btn-default">CANCEL</a>
                 <div class="clr"></div>
             </div>
         </form>

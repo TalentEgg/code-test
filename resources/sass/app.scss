@@ -36,11 +36,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-.roundedborder {
-    @include border-radius (.2em);
-    border: 2px solid darken($indigo, 10%);
-}
-
 .global-width {
     max-width: 1406px;
     width: 100%;
@@ -141,9 +136,76 @@
             border-color: $red;
         }
     }
+}
 
-    &__text {
-        //text-align: left;
+.wrapper {
+    max-width: 940px;
+    display: grid;
+    grid-gap: 10px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
+
+    @include respond-to('small') {
+        width: calc(#{$breakpoint-small});
+    }
+
+    @include respond-to('medium') {
+        width: calc(#{$breakpoint-medium});
+    }
+
+    @include respond-to('large') {
+        width: calc(#{$breakpoint-large});
+    }
+
+    &--full {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    .sidebar {
+        float: left;
+        width: 20%;
+    }
+
+    .content {
+        float: right;
+        width: 80%;
+
+        h5 {
+            color: $teal;
+        }
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .header, .footer {
+        grid-column: 1 / -1;
+        /* needed for the floated layout */
+        clear: both;
+    }
+
+}
+
+.wrapper > * {
+    background-color: $grid_grey;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 95%;
+    margin-bottom: 10px;
+}
+
+/* This is to set the widths used on floated items back to auto, and remove the bottom margin as
+   when there are grid, there have gaps. */
+@supports (display: grid) {
+    .wrapper > * {
+        width: auto;
+        margin: 0;
     }
 }
 

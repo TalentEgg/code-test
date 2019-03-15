@@ -3,6 +3,10 @@
 @section('content')
 
         <section class="container">
+
+            <h2>CREATE JOB</h2>
+            <br />
+
             <form class="form"
                   method="POST"
                   action="{{ action('JobsController@store') }}"
@@ -53,6 +57,7 @@
 
                 <div>
                     <input type="submit" value="Submit" />
+                    <a href="{{ URL::previous() }}" class="btn btn-default">Back</a>
                     <div class="clr"></div>
                 </div>
             </form>
