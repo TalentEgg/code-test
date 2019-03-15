@@ -9,6 +9,14 @@ Jobs table can perform live search, sorting , pagination from the front end.
 
 Application is completely working as a Single-Page-Application which is comminucating with laravel backend.
 
+LIVE DEMO
+
+https://talentegg.parthrai.ca/login
+
+ username - john@talent.com
+
+ pass- testpass
+
 
 
 
