@@ -139,11 +139,10 @@
 }
 
 .wrapper {
-    max-width: 940px;
+    max-width: 950px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
     margin: 0 auto;
-    grid-template-columns: 1fr 3fr;
 
     @include respond-to('small') {
         width: calc(#{$breakpoint-small});
@@ -156,10 +155,6 @@
     @include respond-to('large') {
         width: calc(#{$breakpoint-large});
     }
-
-    &--full {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 500px) {
@@ -167,6 +162,11 @@
     .sidebar {
         float: left;
         width: 20%;
+
+        button {
+            font-weight: bold;
+            color: $red;
+        }
     }
 
     .content {
@@ -187,8 +187,12 @@
         grid-column: 1 / -1;
         /* needed for the floated layout */
         clear: both;
-    }
 
+        &__left {
+            float: left;
+            width: 45%;
+        }
+    }
 }
 
 .wrapper > * {

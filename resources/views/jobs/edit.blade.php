@@ -87,7 +87,7 @@
 
             <div>
                 <input type="submit" value="Save" />
-                <a href="{{ URL::previous() }}" class="btn btn-default">CANCEL</a>
+                <a href="{{ action('JobsController@index') }}" class="btn btn-default">CANCEL</a>
                 <div class="clr"></div>
             </div>
         </form>

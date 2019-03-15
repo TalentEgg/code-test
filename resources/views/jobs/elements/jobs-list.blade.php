@@ -1,23 +1,34 @@
 <ul class="jobs-list">
 
     <div class="wrapper">
-        <header class="header"><h3>JOBS ( {{ $jobs->count() }} )</h3></header>
+        <header class="header">
+            <div class="header__left">
+                <a href="{{ action('JobsController@create') }}" class="btn btn-xs btn-info pull-right">
+                    POST a JOB
+                </a>
+
+            </div>
+            <div class="header__left">
+                <h3>JOBS ( {{ $jobs->count() }} )</h3>
+            </div>
+        </header>
 
         @foreach($jobs as $job)
             <aside class="sidebar">
-                <div>
-                    <a href="{{ route('jobs.edit', compact('job')) }}">
-                        <button>EDIT</button>
+                <div class="sidebar__edit">
+                    <a href="{{ route('jobs.edit', compact('job')) }}" class="btn btn-xs btn-info pull-right">
+                        EDIT
                     </a>
                 </div>
-                <div>
+                <br/>
+                <div class="sidebar__delete">
                     <form
                         action="{{ route('jobs.destroy', compact('job')) }}"
                         method="POST"
                     >
                         @method('DELETE')
                         @csrf
-                        <button>REMOVE</button>
+                        <button class="btn btn-xs btn-info pull-right">REMOVE</button>
                     </form>
                 </div>
             </aside>
@@ -31,39 +42,10 @@
             </article>
 
         @endforeach
-        <footer class="footer">My footer</footer>
+        <footer class="footer">
+            {{ $jobs->links() }}
+        </footer>
     </div>
-
-
-
-
-    {{--@foreach($jobs as $job)--}}
-        {{--<li>--}}
-
-            {{--<div>--}}
-                {{--<div>--}}
-                    {{--{{$job->description}}--}}
-                {{--</div>--}}
-
-                {{--<div>--}}
-
-                    {{--<a href="{{ route('jobs.edit', compact('job')) }}">--}}
-                        {{--<button>EDIT</button>--}}
-                    {{--</a>--}}
-
-                    {{--<form--}}
-                        {{--action="{{ route('jobs.destroy', compact('job')) }}"--}}
-                        {{--method="POST"--}}
-                    {{-->--}}
-                        {{--@method('DELETE')--}}
-                        {{--@csrf--}}
-                        {{--<button>REMOVE</button>--}}
-                    {{--</form>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-        {{--</li>--}}
-    {{--@endforeach--}}
 </ul>
 
 

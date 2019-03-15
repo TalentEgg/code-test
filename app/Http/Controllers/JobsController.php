@@ -32,7 +32,7 @@ class JobsController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        $jobs = $user->jobs;
+        $jobs = $user->jobs()->paginate(8);
 
         return view('jobs.index', compact('jobs'));
     }

@@ -57,7 +57,7 @@
 
                 <div>
                     <input type="submit" value="Submit" />
-                    <a href="{{ URL::previous() }}" class="btn btn-default">Back</a>
+                    <a href="{{ action('JobsController@index') }}" class="btn btn-default">Back</a>
                     <div class="clr"></div>
                 </div>
             </form>
