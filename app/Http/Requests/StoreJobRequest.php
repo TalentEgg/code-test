@@ -39,10 +39,10 @@ class StoreJobRequest extends FormRequest
     public function rules()
     {
         return [
-            self::COMPANY_NAME => 'required|string',
-            self::JOB_TITLE => 'required|string',
-            self::DESCRIPTION => 'string',
-            self::ADDRESS => 'string',
+            self::COMPANY_NAME => 'required|max:255|string',
+            self::JOB_TITLE => 'required|max:255|string',
+            self::DESCRIPTION => 'string|nullable',
+            self::ADDRESS => 'string|max:255|nullable',
         ];
     }
 }
