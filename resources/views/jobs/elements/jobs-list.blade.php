@@ -1,6 +1,15 @@
 <ul class="jobs-list">
 
     <div class="wrapper">
+
+        @if (session('error'))
+            <div class="grid-row">
+                <div class="grid-row__col grid-row__col--sm-6">
+                    <div class="alert alert-danger">{{ session('error') }}</div>
+                </div>
+            </div>
+        @endif
+
         <header class="header">
             <div class="header__left">
                 <a href="{{ action('JobsController@create') }}" class="btn btn-xs btn-info pull-right">

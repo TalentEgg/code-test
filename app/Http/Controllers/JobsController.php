@@ -121,7 +121,7 @@ class JobsController extends Controller
         $user = auth()->user();
 
         if (!$job->hasUser($user)) {
-            //TODO: return error
+            return back()->withError('Could not remove the job posting.')->withInput();
         }
 
         $deleted = $job->delete();
