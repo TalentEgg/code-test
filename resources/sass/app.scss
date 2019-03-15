@@ -142,17 +142,8 @@
         }
     }
 
-    &__button {
-        text-align: right;
-
-        &--center {
-            text-align: center;
-        }
-
-        &--left {
-            text-align: left;
-        }
-
+    &__text {
+        //text-align: left;
     }
 }
 

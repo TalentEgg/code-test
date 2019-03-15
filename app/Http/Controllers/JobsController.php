@@ -49,6 +49,7 @@ class JobsController extends Controller
      * Create the job.
      *
      * @param StoreJobRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreJobRequest $request)
     {
@@ -58,7 +59,12 @@ class JobsController extends Controller
         $data['user_id'] = $user->id;
 
         $job = new Job($data);
-        $job->save();
+        $saved = $job->save();
+
+        if (!$saved) {
+            return back()->withError('Could not create the job posting.')->withInput();
+        }
+        return redirect()->action('JobsController@index');
     }
 
     /**
@@ -69,7 +75,7 @@ class JobsController extends Controller
      */
     public function edit(Job $job)
     {
-        return view('jobs.edit', compact($job));
+        return view('jobs.edit', compact('job'));
     }
 
     /**
@@ -78,26 +84,26 @@ class JobsController extends Controller
      * @param UpdateJobRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UpdateJobRequest $request)
+    public function update(UpdateJobRequest $request, $jobId)
     {
         $job = Job::take(1)
-            ->wherePublicId($request->public_id)
+            ->wherePublicId($jobId)
             ->first();
 
         if ($job == null) {
-            //TODO: return error;
+            return back()->withError('Job not found!')->withInput();
         }
 
-        $user = $request->user();
+        $user = request()->user();
         if (!$job->hasUser($user)) {
-            //TODO: return error
+            return back()->withError('Cannot update job that does not belong to you')->withInput();
         }
 
         $data = $request->all();
         $saved = $job->update($data);
 
         if (!$saved) {
-            //TODO: return error
+            return back()->withError('Save was not successful')->withInput();
         }
 
         return redirect()->action('JobsController@index');

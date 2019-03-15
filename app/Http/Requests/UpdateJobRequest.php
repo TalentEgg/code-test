@@ -16,6 +16,8 @@ use Illuminate\Foundation\Http\FormRequest;
  */
 class UpdateJobRequest extends FormRequest
 {
+    const COMPANY_NAME = 'company_name';
+    const JOB_TITLE = 'job_title';
     const DESCRIPTION = 'description';
     const ADDRESS = 'address';
 
@@ -37,8 +39,10 @@ class UpdateJobRequest extends FormRequest
     public function rules()
     {
         return [
+            self::COMPANY_NAME => 'required|string',
+            self::JOB_TITLE => 'required|string',
             self::DESCRIPTION => 'string',
-            self::ADDRESS => 'required|string',
+            self::ADDRESS => 'string',
         ];
     }
 }

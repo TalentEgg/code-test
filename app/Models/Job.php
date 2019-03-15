@@ -35,6 +35,8 @@ class Job extends Model
      */
     protected $fillable = [
         'user_id',
+        'company_name',
+        'job_title',
         'description',
         'address',
     ];

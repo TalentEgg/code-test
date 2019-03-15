@@ -11,12 +11,8 @@
         </div>
 
         <div class="base-sidebar-layout__content">
-            <div id="active-tab">
-                @if($jobs->count() === 0)
-                    @include('jobs.create')
-                @else
-                    @include('jobs.elements.jobs-list', ['jobs' => $jobs])
-                @endif
+            <div>
+                @include('jobs.elements.jobs-list', ['jobs' => $jobs])
             </div>
         </div>
 
