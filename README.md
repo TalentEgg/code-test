@@ -1,6 +1,6 @@
-Name: (Your name)
+Name: Simon Ng
 
-Email: (Your email)
+Email: simon.ng.imi@gmail.com
 
 
 ---
