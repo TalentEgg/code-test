@@ -23,6 +23,30 @@ Route::group(['prefix' => 'jobs'], function () {
         'as' => 'jobs.index',
         'uses' => 'JobsController@index'
     ]);
+	
+	Route::get('/add', function () {
+		return view('jobs/add');
+	});
+	
+	Route::get('/edit/{id}', [
+        'as' => 'jobs.edit',
+        'uses' => 'JobsController@edit'
+    ]);
+	
+	Route::get('/delete/{id}', [
+        'as' => 'jobs.delete',
+        'uses' => 'JobsController@delete'
+    ]);
+	
+	Route::post('/save', [
+        'as' => 'jobs.save',
+        'uses' => 'JobsController@save'
+    ]);
+	
+	Route::post('/update', [
+        'as' => 'jobs.update',
+        'uses' => 'JobsController@update'
+    ]);
 });
 
 Auth::routes();
